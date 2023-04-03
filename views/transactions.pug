@@ -1,0 +1,45 @@
+html
+  head
+    title Spendings App
+    link(rel="stylesheet", href="/styles/style.css")
+    link(rel="preconnect", href="https://fonts.googleapis.com")
+    link(rel="preconnect", href="https://fonts.gstatic.com" crossorigin)
+    link(href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&family=Oswald:wght@400;500&family=Roboto:wght@100;300;400;700&display=swap", rel="stylesheet")
+  body
+    header
+      h1 Spendings App
+      nav
+        ul
+          li
+            a(href="/") Home
+          li
+            a.active(href="/transactions") Transactions
+          li
+    main
+      h2 Transactions
+      .cards-wrapper
+        each transaction, i in transactions
+          .card
+            h3 Transaction #{i+1} 
+            p 
+              strong Date: 
+              span=transaction.date
+            p 
+              strong Title: 
+              span=transaction.title
+            p 
+              strong Description: 
+              span=transaction.description
+            p 
+              strong Category: 
+              span=transaction.category
+            p 
+              strong Amount: 
+              span=transaction.amount 
+              span UZS
+            .btn-wrapper 
+              button(type="submit") Update
+              button.danger(type="submit", data-id=transaction.id) Delete
+    footer
+      p This web application was created to fulfill Web Technology module’s requirements and does not represent an actual company or service
+    script(src="/scripts/delete-request.js") 

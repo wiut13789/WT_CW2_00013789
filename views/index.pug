@@ -11,27 +11,27 @@ html
       nav
         ul
           li
-            a.active(href="#") Home
+            a.active(href="/") Home
           li
-            a(href="#") Transactions
-          li
-            a(href="#") Categories
+            a(href="/transactions") Transactions
     main
       h2 Add Transaction
       form(action="/transactions", method="POST")
-        label(for="date") Date:
-        input(type="date", name="date", required)
-        label(for="description") Description:
-        input(type="text", name="description", required)
-        label(for="category") Category:
-        select(name="category", required)
-          option(value="groceries") Groceries
-          option(value="entertainment") Entertainment
-          option(value="transportation") Transportation
-          option(value="housing") Housing
-          option(value="utilities") Utilities
-        label(for="amount") Amount:
-        input(type="number", name="amount", step="0.01", min="0", required)
+        label Date:
+            input(type="date", name="date", required)
+        label Title:
+            input(type="text", name="title", required)
+        label Description:
+            textarea(type="text", name="description", required)
+        label Category:
+            select(name="category", required)
+                option(value="groceries") Groceries
+                option(value="entertainment") Entertainment
+                option(value="transportation") Transportation
+                option(value="housing") Housing
+                option(value="utilities") Utilities
+        label Amount:
+            input(type="number", name="amount", step="0.01", min="0", required)
         button(type="submit") Add Transaction
     footer
       p This web application was created to fulfill Web Technology module’s requirements and does not represent an actual company or service
