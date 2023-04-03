@@ -1,0 +1,52 @@
+html {
+   height: 100%;
+   font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    position: relative;
+    max-width: 1100px;
+    height: 100%;
+    margin: auto;
+    background-color: #fff;
+}
+
+ul {
+    display: flex;
+    gap: 20px;
+    list-style-type: none;
+}
+
+input, select, option, button {
+    font-family: inherit;
+}
+
+a {
+    text-decoration: none;
+    color: #222;
+}
+
+a:hover {
+    color: #888;
+}
+
+a.active {
+    text-decoration: underline;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+
+
+
